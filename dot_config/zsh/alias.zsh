@@ -13,4 +13,13 @@ alias czd="chezmoi cd"
 # useful while configuring waybar
 alias ww="chezmoi apply && waybar"
 
+# development server starts
+alias nd="npm run dev"
 
+# files
+alias laa="eza -lha --no-user"
+alias la="eza -a"
+alias l="eza"
+alias lt="eza -T"
+alias lr="eza -R"
+alias yc="yazi /mnt/collections"
