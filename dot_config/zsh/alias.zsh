@@ -17,8 +17,9 @@ alias ww="chezmoi apply && waybar"
 alias nd="npm run dev"
 
 # files
-alias laa="eza -lha --no-user"
+alias ll="eza -lha --no-user"
 alias la="eza -a"
+alias ls="eza"
 alias l="eza"
 alias lt="eza -T"
 alias lr="eza -R"
