@@ -5,6 +5,7 @@ alias ff="fastfetch"
 alias n="nvim"
 alias lg="lazygit"
 alias y="yazi"
+alias t="tmux"
 
 # chezmoi aliases
 alias cza="chezmoi apply"
@@ -24,3 +25,8 @@ alias l="eza"
 alias lt="eza -T"
 alias lr="eza -R"
 alias yc="yazi /mnt/collections"
+
+# navigation
+# i might remove since im so used to using zoxide
+alias .="cd .."
+alias ..="cd ../../"
