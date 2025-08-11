@@ -1,0 +1,20 @@
+# # Spacing around the equals sign does not matter.
+# # All of these are identical:
+# key=value
+# key= value
+# key =value
+# key = value
+#
+# if this gets too big can split files
+
+# look
+theme = catppuccin-mocha
+background-opacity = 0.85
+window-padding-x = 25
+window-padding-y = 25
+
+# feel
+confirm-close-surface = false
+
+# keybinds
+
