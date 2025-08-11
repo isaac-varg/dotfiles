@@ -119,9 +119,10 @@
         "interval": 2
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}",
+        "format": "{icon} {volume}",
         "format-muted": "婢",
-        "on-click": "pavucontrol -t 3",
+        "on-click": "ghostty -e wiremix",
+        //"on-click": "pavucontrol -t 3",
         "tooltip-format": "{icon} {desc} // {volume}%",
         "scroll-step": 2,
         "format-icons": {
