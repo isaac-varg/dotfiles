@@ -108,6 +108,7 @@
     },
     "network": {
         "tooltip": true,
+        "on-click": "ghostty -e impala",
         "format-wifi": " ",
         "rotate": 0,
         "format-ethernet": "󰈀 ",
@@ -115,12 +116,12 @@
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "󰖪 ",
         "tooltip-format-disconnected": "Disconnected",
-        "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+        //"format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
         "interval": 2
     },
     "pulseaudio": {
         "format": "{icon} {volume}",
-        "format-muted": "婢",
+        "format-muted": " ",
         "on-click": "ghostty -e wiremix",
         //"on-click": "pavucontrol -t 3",
         "tooltip-format": "{icon} {desc} // {volume}%",
@@ -139,8 +140,8 @@
     "pulseaudio#microphone": {
         "format": "{format_source}",
         "rotate": 0,
-        "format-source": "",
-        "format-source-muted": "",
+        "format-source": " x",
+        "format-source-muted": " ",
         "on-click": "pavucontrol -t 4",
         "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
         "scroll-step": 5
