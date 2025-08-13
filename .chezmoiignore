@@ -1,1 +1,6 @@
+# ignored configs
 .config/tmux/plugins
+
+# ignored organizational directories 
+/packages
+

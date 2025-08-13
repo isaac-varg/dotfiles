@@ -1,18 +1,7 @@
 alias c="clear"
 
-# i swear i am not lazy
-alias ff="fastfetch"
-alias n="nvim"
+# simple
 alias lg="lazygit"
-alias y="yazi"
-alias t="tmux"
-
-# chezmoi aliases
-alias cza="chezmoi apply"
-alias czd="chezmoi cd"
-
-# useful while configuring waybar
-alias ww="chezmoi apply && waybar"
 
 # development server starts
 alias nd="npm run dev"
