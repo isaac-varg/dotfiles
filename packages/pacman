@@ -1,2 +1,48 @@
+# hyrpland criticals
+archlinux-xdg-menu
+hyprpolkitagent
+bluez
+bluez-utils
+
+
+# hyprland rice
+blueman
+impala
+ttf-firacode-nerd
+noto-fonts-emoji
+rofi-wayland
+swww
+waybar
+wiremix
+
 # core
+wl-clipboard
+fzf
+ghostty
+git
 neovim
+btop
+starship
+vivaldi
+zoxide
+zsh
+zsh-completions
+
+# utilities 
+eza
+github-cli
+lazygit
+mise
+unzip
+yazi
+
+# comms
+discord
+
+# commercial / paid packages
+spotify-launcher
+
+# required for others
+fd
+gcc
+ripgrep
