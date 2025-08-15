@@ -23,7 +23,6 @@ chezmoi init https://github.com/isaac-varg/dotfiles.git
 
 
 
-
 # todo
 » notifications
 - right now dunst is being used
