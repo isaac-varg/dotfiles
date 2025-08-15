@@ -38,6 +38,8 @@ chezmoi init https://github.com/isaac-varg/dotfiles.git
 » note vivaldi presets and tab management
 - there isn't a linuxish way of retaining these settings as far as i can tell
 
+» handle vivaldi and 1password working together 
+
 » automate change to zsh
 
 » style wofi
