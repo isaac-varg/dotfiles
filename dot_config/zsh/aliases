@@ -2,9 +2,7 @@ alias c="clear"
 
 # simple
 alias lg="lazygit"
-
-# development server starts
-alias nd="npm run dev"
+alias ff="clear && fastfetch"
 
 # files
 alias ll="eza -lha --no-user"
