@@ -11,6 +11,9 @@ mpv
 qimgv-git
 vial-appimage
 
+# gaming
+pegasus-frontend-git 
+
 # commercial / paid packages
 1password
 beekeeper-studio-bin
