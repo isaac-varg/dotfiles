@@ -46,9 +46,12 @@ spotify-launcher
 
 # required for others
 fd
+ffmpegthumbs
 gcc
+kdegraphics-thumbnailers
 ripgrep
 sddm
 qt5-graphicaleffects
 qt5-svg
 qt5-quickcontrols2
+

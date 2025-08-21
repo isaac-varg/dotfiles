@@ -12,7 +12,11 @@ qimgv-git
 vial-appimage
 
 # gaming
+emulationstation-de 
 pegasus-frontend-git 
+
+# notes
+drawio
 
 # commercial / paid packages
 1password
