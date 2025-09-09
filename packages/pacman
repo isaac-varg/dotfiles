@@ -3,6 +3,8 @@ archlinux-xdg-menu
 hyprpolkitagent
 bluez
 bluez-utils
+gnome-keyring
+seahorse
 
 
 # hyprland rice
