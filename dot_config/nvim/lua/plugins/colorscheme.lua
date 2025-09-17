@@ -3,8 +3,8 @@ return {
     "catppuccin/nvim",
     lazy = true,
     name = "catppuccin",
-    flavor = "mocha",
     opts = {
+      transparent_background = true,
       integrations = {
         aerial = true,
         alpha = true,
@@ -44,14 +44,31 @@ return {
         which_key = true,
       },
     },
-    {
-      "akinsho/bufferline.nvim",
-      optional = true,
-      opts = function(_, opts)
-        if (vim.g.colors_name or ""):find("catppuccin") then
-          opts.highlights = require("catppuccin.groups.integrations.bufferline").get()
-        end
-      end,
+    specs = {
+      {
+        "akinsho/bufferline.nvim",
+        optional = true,
+        opts = function(_, opts)
+          if (vim.g.colors_name or ""):find("catppuccin") then
+            opts.highlights = require("catppuccin.groups.integrations.bufferline").get_theme()
+          end
+        end,
+      },
     },
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin",
+    },
+  },
+  {
+    "akinsho/bufferline.nvim",
+    init = function()
+      local bufline = require("catppuccin.groups.integrations.bufferline")
+      function bufline.get()
+        return bufline.get_theme()
+      end
+    end,
   },
 }
