@@ -8,10 +8,12 @@
 # if this gets too big can split files
 
 # look
-theme = catppuccin-mocha
+theme = Catppuccin Mocha 
 background-opacity = 0.85
 window-padding-x = 25
 window-padding-y = 25
+
+font-family = "FiraCode Nerd Font Med"
 
 # feel
 confirm-close-surface = false
