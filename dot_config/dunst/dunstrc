@@ -1,3 +1,27 @@
 [global]
-    # Follow the window with keyboard focus.
-    follow = keyboard
+# follow the window with keyboard focus.
+follow = keyboard
+
+# catpuccin theme
+frame_color = "#89b4fa"
+separator_color= frame
+highlight = "#89b4fa"
+
+# font
+font = FiraCode Nerd Font Mono 14
+
+[urgency_low]
+# catpuccin theme
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_normal]
+# catpuccin theme
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_critical]
+# catpuccin theme
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#fab387"
