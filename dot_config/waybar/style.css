@@ -6,76 +6,92 @@
     font-size: 13px;
 }
 
-@import './themes/mocha.css';
+@import "./themes/rose-pine-moon.css";
 
 
 window#waybar {
     all: unset;
 }
 
-.modules-left {
-    padding: 10px 15px;
-    margin: 10px 5px;
-    border-radius: 20px;
-    background: @base
-}
-
-.modules-center {
-    padding: 5px 15px;
-    margin: 10px 5px;
-    border-radius: 20px;
-    background: @base
-}
-
-.modules-right {
-    padding: 10px 15px;
-    margin: 10px 5px;
-    border-radius: 20px;
-    background: @base
-}
-
-
-tooltip {
-    background: alpha(@base, 0.8);
-    border-radius: 20px;
-}
-
-tooltip label {
-    color: white;
+#clock,
+#workspaces,
+#pulseaudio,
+#connectivity,
+#tray,
+#laptop {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background: @base;
+    color:  @rose;
+    border-bottom: 5px;
+    border-style: solid;
+    border-color: @subtle;
+    transition: 0.3s;
 }
 
 #workspaces button {
-    box-shadow: none;
-    text-shadow: none;
-    padding: 0px;
-    border-radius: 20px;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-left: 0px;
-    padding-left: 3px;
-    padding-right: 3px;
-    margin-right: 0px;
-    color: @main-fg;
-    animation: ws_normal 20s ease-in-out 1;
+    min-width: 14px;
+    min-height: 14px;
+    margin: 0 4px;
+    padding: 0;
+    border-radius: 50%; 
+    background-color: transparent; 
+    border: 2px solid @rose;
+}
+
+#workspaces button label {
+    color: red; 
+    font-size: 0px;
 }
 
 #workspaces button.active {
-    background: @lavender;
-    color: @crust;
-    margin-left: 3px;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-right: 3px;
-    animation: ws_active 20s ease-in-out 1;
-    transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+    background: @rose;
+    box-shadow: none;
+    text-shadow: none;
+    color: transparent;
+    transition: all 0.2s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
 #workspaces button:hover {
-    background: @mauve;
-    color: @crust;
-    animation: ws_hover 20s ease-in-out 1;
-    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+    background: @rose;
+    box-shadow: none;
+    text-shadow: none;
+    color: transparent;
 }
+
+#workspaces button.urgent {
+    background: @love;
+    border: 2px solid @love;
+    box-shadow: none;
+    text-shadow: none;
+    color: transparent;
+}
+
+#backlight,
+#battery,
+#network,
+#bluetooth {
+    margin: 0 4px; 
+}
+
+tooltip {
+    background: alpha(@overlay, 0.9);
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+tooltip label {
+    color: @text;
+    text-shadow: none;
+}
+
 
 
 @keyframes blink {
@@ -89,16 +105,5 @@ tooltip label {
 #system {
     background: @base;
 }
-
-#battery,
-#network,
-#bluetooth,
-#pulseaudio,
-#backlight,
-#custom-expand {
-    margin-right: 10px;
-}
-
-
 
 

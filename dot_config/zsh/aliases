@@ -17,3 +17,5 @@ alias yc="yazi /mnt/collections"
 # i might remove since im so used to using zoxide
 alias .="cd .."
 alias ..="cd ../../"
+
+# figlet

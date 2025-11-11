@@ -1,54 +1,48 @@
 {
     "height": 30, // Waybar height (to be removed for auto height)
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 6, // Gaps between modules (4px)
+    /*
+    ** modules
+    */
     "modules-left": [
-        "clock"
+        "clock#date",
+        "clock#time",
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "group/system",
-        "backlight",
+        "tray",
         "pulseaudio",
-        "tray"
+        "group/connectivity",
+        "group/laptop",
     ],
-    // Modules configuration
+   "clock#date": {
+        "format": " {:%A %W  %d %B %Y }",
+        "tooltip": false,
+    },
+    "clock#time": {
+        "format": "󰥔 {:%I:%M %p}",
+        "tooltip": false,
+    },
     "hyprland/workspaces": {
-        "rotate": 0,
-        "all-outputs": true,
-        "active-only": false,
-        "on-click": "activate",
-        "persistent-workspaces": {}
+      "active-only": false,
+      "tooltip": true,
     },
-    "custom/expand": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/end": {
-        "format": "|",
-        "tooltip": false
-    },
-    "group/system": {
+
+    "group/connectivity": {
         "orientation": "horizontal",
-        "drawer": {
-            "transition-duration": 600,
-            "transition-to-left": true,
-            "click-to-reveal": true
-        },
         "modules": [
-            "custom/expand",
-            "bluetooth",
             "network",
-            "battery",
-            "custom/end"
+            "bluetooth",
         ]
     },
-    "clock": {
-        "format": "󰥔  {:%I:%M %p}",
-        "format-alt": "{:%A, %d %B %Y %I:%M %p}",
-        "tooltip-format": "<big>Week {:%W}</big>\n<tt><small>{calendar}</small></tt>",
-        "interval": 60
+    "group/laptop": {
+        "orientation": "horizontal",
+        "modules": [
+            "backlight",
+            "battery",
+        ]
     },
     "battery": {
         "states": {
@@ -79,12 +73,11 @@
         "format-off": "BT-off",
         "format-disabled": "󰂲",
         "format-connected-battery": "{device_battery_percentage}% 󰂯",
-        "format-alt": "{device_alias} 󰂯",
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
-        "on-click-right": "blueman-manager"
+        "on-click": "blueman-manager"
     },
     "backlight": {
         "device": "intel_backlight",
@@ -116,11 +109,10 @@
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "󰖪 ",
         "tooltip-format-disconnected": "Disconnected",
-        //"format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
         "interval": 2
     },
     "pulseaudio": {
-        "format": "{icon} {volume}",
+        "format": "{icon}  {volume}",
         "format-muted": " ",
         "on-click": "ghostty -e wiremix",
         //"on-click": "pavucontrol -t 3",
