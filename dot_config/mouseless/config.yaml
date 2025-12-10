@@ -42,6 +42,7 @@ layers:
   passThrough: false
   bindings:
     q: layer initial
+    space: layer arrows
     j: left
     k: down
     l: right
