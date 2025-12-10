@@ -1,0 +1,50 @@
+# defaulkt mouse speeds
+baseMouseSpeed: 750.0
+baseScrollSpeed: 20.0
+
+layers:
+# think of the inital layer as the activator
+- name: initial
+  bindings:
+    comma: tap-hold comma ; toggle-layer mouse ; 500
+    dot: tap-hold dot ; toggle-layer arrows ; 500
+# mouse movement layaer
+- name: mouse
+  # when true, keys that are not mapped keep their original meaning
+  passThrough: true
+  bindings:
+    # quit mouse layer
+    q: layer initial
+    #
+    # keep the mouse layer active
+    space: layer mouse
+    #
+    # basic movements
+    l: move  1  0
+    h: move -1  0
+    j: move  0  1
+    k: move  0 -1
+    comma: scroll up
+    m: scroll down
+    # 
+    # speed modifiers
+    leftshift: speed 3.5
+    a: speed 0.25
+    #
+    # mouse buttons
+    f: button left
+    d: button middle
+    s: button right
+# arrow layer
+# its weird but even though i main vim keys
+# for arrows i still use the directional lol
+- name: arrows
+  passThrough: false
+  bindings:
+    q: layer initial
+    j: left
+    k: down
+    l: right
+    i: up
+      
+      
