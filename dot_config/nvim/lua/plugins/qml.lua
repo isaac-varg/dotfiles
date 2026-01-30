@@ -18,6 +18,19 @@ return {
             "qmlls",
             "-I",
             "/usr/lib/qt6/qml",
+            "-I",
+            "/usr/lib/qt6/qml/Quickshell",
+            "-I",
+            "/usr/share/quickshell/qml",
+          },
+          handlers = {
+            ["textDocument/publishDiagnostics"] = function(_, result, ctx, config)
+              result.diagnostics = vim.tbl_filter(function(d)
+                -- Filter out "is not creatable" warnings
+                return not d.message:match("is not creatable")
+              end, result.diagnostics)
+              vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
+            end,
           },
         },
       },
